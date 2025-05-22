@@ -46,10 +46,14 @@ bin/kafka-topics.sh --create --topic sensor-kelembaban-gudang --bootstrap-server
 ```bash
 python producer_suhu.py
 ```
+<img width="532" alt="Screenshot 2025-05-22 at 07 56 56" src="https://github.com/user-attachments/assets/88e18f7e-0751-4523-ad12-43d5347711c4" />
+
 - producer_kelembaban.py: Mengirimkan data kelembaban secara real-time.
 ```bash
 python producer_kelembaban.py
 ```
+<img width="572" alt="Screenshot 2025-05-22 at 07 57 35" src="https://github.com/user-attachments/assets/3913619a-02ef-49b5-8de9-edd10f00039d" />
+
 ### Kafka Consumers (PySpark)
 a. Filtering Stream (peringatan individual)
 ```bash
@@ -58,6 +62,8 @@ spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5 \
   consumer_filter.py
 ```
+<img width="275" alt="Screenshot 2025-05-22 at 07 58 21" src="https://github.com/user-attachments/assets/5ac741cd-cfdb-435e-a0f0-4ff953a0a308" />
+
 b. Join Stream (peringatan gabungan)
 ```bash
 spark-submit \
@@ -65,3 +71,6 @@ spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5 \
   consumer_join.py
 ```
+<img width="559" alt="Screenshot 2025-05-22 at 07 59 16" src="https://github.com/user-attachments/assets/ddb67f33-91d4-4216-a981-7c8c0b067a70" />
+
+
