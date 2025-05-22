@@ -8,6 +8,11 @@
 Sebuah perusahaan logistik mengelola beberapa gudang yang menyimpan barang-barang sensitif seperti makanan, obat-obatan, dan elektronik. Untuk menjaga kualitas penyimpanan, gudang dilengkapi dengan **sensor suhu** dan **sensor kelembaban** yang mengirimkan data setiap detik. Perusahaan ingin memantau kondisi gudang secara **real-time** untuk mencegah kerusakan barang akibat suhu terlalu tinggi atau kelembaban berlebih.
 
 ---
+## Tujuan Pembelajaran
+- Memahami alur kerja real-time data streaming menggunakan Apache Kafka dan PySpark.
+- Menerapkan sistem pemantauan gudang berbasis sensor suhu dan kelembaban.
+- Mempelajari filtering dan join stream untuk mendeteksi kondisi abnormal.
+---
 
 ## Tools yang Digunakan
 - Apache Kafka `3.9.0`
@@ -88,4 +93,6 @@ Jika nilai melebihi ambang batas:
 ### Peringatan Gabungan
 Join data suhu dan kelembaban berdasarkan gudang_id dalam window waktu (10 detik) dan tampilkan status:
 <img width="559" alt="Screenshot 2025-05-22 at 07 59 16" src="https://github.com/user-attachments/assets/ddb67f33-91d4-4216-a981-7c8c0b067a70" />
-
+---
+## Kesimpulan
+Melalui proyek ini, berhasil dibangun sistem monitoring gudang real-time menggunakan Apache Kafka dan PySpark. Sistem ini dapat mendeteksi secara cepat kondisi tidak normal berdasarkan ambang batas suhu dan kelembaban, serta menggabungkan data untuk peringatan gabungan antar sensor. Implementasi ini dapat dikembangkan lebih lanjut untuk pengambilan keputusan otomatis.
